@@ -78,10 +78,9 @@ def important_outdated_spack_projects():
     # Compute dynamic widths
     pkg_width = max(len(pkg) for pkg in authorities) if authorities else 0
     from_width = max(len(oudated[pkg][0]) for pkg in authorities) if authorities else 0
-    to_width = max(len(oudated[pkg][1]) for pkg in authorities) if authorities else 0
     
     for pkg in authorities:
-        print(f"{pkg:>{pkg_width}}: {oudated[pkg][0]:>{from_width}} -> {oudated[pkg][1]:<{to_width}}")
+        print(f"{pkg:>{pkg_width}}: {oudated[pkg][0]:>{from_width}} -> {oudated[pkg][1]}")
 
 
 if __name__ == "__main__":

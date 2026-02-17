@@ -1,5 +1,6 @@
-/.cache
-/.ruff_cache
-/.venv
-/pyrightconfig.json
-/result.json
+.cache
+.ruff_cache
+.venv
+pyrightconfig.json
+__pycache__/
+*.egg-info/
