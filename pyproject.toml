@@ -5,6 +5,9 @@ description = "Track important package updates in Spack"
 requires-python = ">=3.8"
 dependencies = ["networkx[default]"]
 
+[project.scripts]
+spack-package-updates = "important_updates:important_outdated_spack_projects"
+
 [project.optional-dependencies]
 dev = ["ruff"]
 
