@@ -20,11 +20,11 @@ spack-package-updates
 ## Example Output
 
 ```
-         ninja:       1.13.0 -> 1.13.2       
-     gnuconfig:   2024-07-27 -> 20250710     
-         mpich:        4.3.2 -> 5.0.0        
+         ninja:       1.13.0 -> 1.13.2
+     gnuconfig:   2024-07-27 -> 20250710
+         mpich:        4.3.2 -> 5.0.0
          msmpi:       10.1.1 -> 10.1.12498.52
-        py-pip:       25.1.1 -> 26.0.1       
+        py-pip:       25.1.1 -> 26.0.1
 ```
 
 The output shows:
