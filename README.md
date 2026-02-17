@@ -6,6 +6,7 @@ This tool identifies important outdated packages in Spack by analyzing the depen
 
 ```bash
 pip install git+https://github.com/haampie/spack-package-updates
+export PYTHONPATH="$PYTHONPATH:/path/to/spack/lib/spack"
 ```
 
 ## Usage
