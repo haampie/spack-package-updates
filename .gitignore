@@ -1,0 +1,5 @@
+/.cache
+/.ruff_cache
+/.venv
+/pyrightconfig.json
+/result.json
