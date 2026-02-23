@@ -20,7 +20,7 @@ def fetch_outdated_spack_projects():
     url = f"{API_URL}/?inrepo=spack&outdated=1"
     # name -> (our version, latest version seen in repology)
     projects: dict[str, tuple[str, str]] = {}
-    at_least_per_page = 5
+    prev_last_project = ""
     while True:
         url_hash = hashlib.sha256(url.encode()).hexdigest()
         cache_file = CACHE_DIR / f"{url_hash}.json"
@@ -52,8 +52,9 @@ def fetch_outdated_spack_projects():
                     spack_name = repo["srcname"]
             if spack_name and spack_version:
                 projects[spack_name] = (spack_version, max_version)
-        if not last_project or len(data) < at_least_per_page:
+        if not last_project or last_project == prev_last_project:
             break
+        prev_last_project = last_project
         url = f"{API_URL}/{last_project}/?inrepo=spack&outdated=1"
     return projects
 
